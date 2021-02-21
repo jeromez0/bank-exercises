@@ -16,11 +16,11 @@ class Menu {
 		this.emailID = scanner.next();
 		BankAccount bank = new BankAccount(this.customerName, this.emailID);
 		this.userInput(bank);
+		scanner.close();
 	}
 
 	private void userInput(BankAccount bank) {
 		char option = '\0';
-		Scanner scanner = new Scanner(System.in);
 		do {
 			System.out.println("\n=====================================");			
 			System.out.println("A. Check Balance");
@@ -69,6 +69,5 @@ class Menu {
 			}
 		} while (option != 'Q');
 		System.out.println("Thank you for using our services");
-		scanner.close();
 	}
 }
